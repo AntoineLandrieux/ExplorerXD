@@ -1,1 +1,1 @@
-<?php try { $server = new PDO("mysql:host=localhost;dbname=explorerxd;charset=UTF8", "AntoineLandrieux", "Antoine0304"); } catch (\Throwable $th) { die(); }?>
+<?php try { $server = new PDO("mysql:host=localhost;dbname=explorerxd;charset=UTF8", "root", ""); } catch (\Throwable $th) { die(); }?>

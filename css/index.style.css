@@ -3,7 +3,7 @@
     padding: 0;
     margin: 0;
 }
-  
+
 #container {
     height: 100vh;
     overflow: hidden;
@@ -24,13 +24,21 @@
 div#container label {
     padding: 10px;
     font-size: 50px;
+    text-shadow: 1px 1px #919191,
+    1px 2px #919191,
+    1px 3px #919191,
+    1px 4px #919191,
+    1px 18px 6px #2d2d2d66,
+    1px 22px 10px #2d2d2d66,
+    1px 25px 35px #2d2d2d66,
+    1px 30px 60px #2d2d2d66;
 }
 
 input {
     border-radius: 10px;
     max-width: 500px;
     width: 500px;
-    height: 25px;
+    height: 30px;
 }
   
 #suggestions {

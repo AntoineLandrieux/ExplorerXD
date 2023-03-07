@@ -10,16 +10,25 @@
     <title>ExplorerXD</title>
 </head>
 <body>
-<div id="cookie">
+    <div id="cookie">
         <span>ExplorerXD utilise des cookies</span>
-        <a onclick="quitModal()" id="accept" class="btn">Accepter</a>
-        <a onclick="quitModal()" id="denny" class="btn">Refuser</a>
+        <a onclick="quitModal()" id="accept" class="btn">D'accord</a>
     </div>
     <div id="load">
         <div id="loader">
             <div id="circle"></div>
         </div>
     </div>
+    <?php
+    include "php/check.login.php";
+    if (isset($_COOKIE["pseudo"]) and isset($_COOKIE["password"])) {
+        if (!empty($_COOKIE["pseudo"]) and !empty($_COOKIE["password"])) {
+            if (!isAccount($_COOKIE["pseudo"], $_COOKIE["password"])) {
+                echo "<a href='127.0.0.1/service/login.php' id='btn'>Se connecter</span>";
+            }
+        }
+    }
+    ?>
     <div id="container">
         <form action="./web/result.php" method="get">
             <label for="search">ExplorerXD</label>

@@ -1,3 +1,9 @@
+body {
+    background: url("../resources/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 div#loader {
     position: fixed;
     z-index: 999999999999999999;
@@ -34,6 +40,6 @@ div#loader div#circle {
         transform: rotate(0);
     }
     to {
-        transform: rotate(360);
+        transform: rotate(360deg);
     }
 }
