@@ -1,0 +1,51 @@
+*, *::before, *::after {
+    font: 20px sans-serif;
+    padding: 0;
+    margin: 0;
+}
+  
+#container {
+    height: 100vh;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+#container form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+div#container label {
+    padding: 10px;
+    font-size: 50px;
+}
+
+input {
+    border-radius: 10px;
+    max-width: 500px;
+    width: 500px;
+    height: 25px;
+}
+  
+#suggestions {
+    background-color: #aaa3a3;
+}
+  
+.suggestion {
+    text-align: center;
+    padding: 5px;
+    border-radius: 1px;
+    background-color: #eee;
+    cursor: pointer;
+}
+  
+.suggestion:hover {
+    background-color: #aaa3a3;
+    transition: .5s all;
+}
