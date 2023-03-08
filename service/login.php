@@ -24,7 +24,7 @@ if (isset($_POST["pseudo"]) and isset($_POST["password"])) {
     <title>ExplorerXD | Signin</title>
 </head>
 <body>
-    <form action="." method="POST">
+    <form action="./login.php" method="POST">
         <input type="text" name="pseudo" id="psd">
         <input type="password" name="password" id="pwd">
         <input type="password" name="password" id="pwd">

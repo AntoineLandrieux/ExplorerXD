@@ -15,22 +15,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `help`
---
-
-DROP TABLE IF EXISTS `help`;
-CREATE TABLE IF NOT EXISTS `help` (
-  `help_id` int(11) NOT NULL AUTO_INCREMENT,
-  `help_userID` int(11) NOT NULL,
-  `help_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `help_obj` varchar(256) NOT NULL,
-  `help_desc` text NOT NULL,
-  PRIMARY KEY (`help_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
 -- Structure de la table `unconfirmed`
 --
 
@@ -41,7 +25,6 @@ CREATE TABLE IF NOT EXISTS `unconfirmed` (
   `web_ip` varchar(256) NOT NULL,
   `web_desc` text NOT NULL,
   `web_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `web_age` int(11) NOT NULL,
   `web_userID` int(11) NOT NULL,
   PRIMARY KEY (`web_id`),
   UNIQUE KEY `web_name` (`web_name`),
@@ -58,10 +41,8 @@ DROP TABLE IF EXISTS `user`;
 CREATE TABLE IF NOT EXISTS `user` (
   `user_id` int(11) NOT NULL AUTO_INCREMENT,
   `user_name` varchar(256) NOT NULL,
-  `user_age` int(11) NOT NULL,
   `user_desc` text NOT NULL,
   `user_paswd` varchar(256) NOT NULL,
-  `user_email` varchar(256) NOT NULL,
   `user_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`user_id`),
   UNIQUE KEY `user_name` (`user_name`),
@@ -81,7 +62,6 @@ CREATE TABLE IF NOT EXISTS `web` (
   `web_ip` varchar(256) NOT NULL,
   `web_desc` text NOT NULL,
   `web_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `web_age` int(11) NOT NULL,
   `web_userID` int(11) NOT NULL,
   PRIMARY KEY (`web_id`),
   UNIQUE KEY `web_name` (`web_name`),

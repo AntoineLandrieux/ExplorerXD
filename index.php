@@ -24,9 +24,16 @@
     if (isset($_COOKIE["pseudo"]) and isset($_COOKIE["password"])) {
         if (!empty($_COOKIE["pseudo"]) and !empty($_COOKIE["password"])) {
             if (!isAccount($_COOKIE["pseudo"], $_COOKIE["password"])) {
-                echo "<a href='127.0.0.1/service/login.php' id='btn'>Se connecter</span>";
+                echo "<a href='service/login.php' id='btn'>Se connecter</a>";
+                echo "<a href='service/signin.php' id='btn'>Creer un compte</a>";
             }
+        } else {
+            echo "<a href='service/login.php' id='btn'>Se connecter</a>";
+            echo "<a href='service/signin.php' id='btn'>Creer un compte</a>";
         }
+    } else {
+        echo "<a href='service/login.php' id='btn'>Se connecter</a>";
+        echo "<a href='service/signin.php' id='btn'>Creer un compte</a>";
     }
     ?>
     <div id="container">
