@@ -7,6 +7,7 @@
     justify-content: center;
     text-align: center;
     flex-direction: column;
+    overflow: hidden;
 }
 
 #container form {
@@ -17,15 +18,16 @@
 
 div#container label {
     padding: 10px;
+    color: #000;
     font-size: 50px;
-    text-shadow: 1px 1px #919191,
-    1px 2px #919191,
-    1px 3px #919191,
-    1px 4px #919191,
-    1px 18px 6px #2d2d2d66,
-    1px 22px 10px #2d2d2d66,
-    1px 25px 35px #2d2d2d66,
-    1px 30px 60px #2d2d2d66;
+    text-shadow: 1px 1px #4952aa,
+    1px 2px #4952aa,
+    1px 3px #4952aa,
+    1px 4px #4952aa,
+    1px 18px 6px #476fff66,
+    1px 22px 10px #476fff66,
+    1px 25px 35px #476fff66,
+    1px 30px 60px #476fff66;
 }
 
 input {
@@ -50,4 +52,37 @@ input {
 .suggestion:hover {
     background-color: #aaa3a3;
     transition: .5s all;
+}
+
+#buttons {
+    width: 100%;
+    position: absolute;
+    flex-direction: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.btns {
+    height: 50px;
+    width: 150px;
+    background: #476fff;
+    margin: 10px;
+    padding: 10px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    text-decoration: none;
+    border: 1px solid #000;
+}
+
+.btns:hover {
+    color:#476fff;
+    background: #fff;
+    transition: all .5s ease-in-out;
 }
