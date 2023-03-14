@@ -14,7 +14,7 @@
     if (isset($_POST["pseudo"]) and isset($_POST["password"])) {
         if (!empty($_POST["pseudo"]) and !empty($_POST["password"])) {
             $crpass = password_hash($_POST['password'], PASSWORD_BCRYPT, ['cost'=>12,]);
-            if (!isAccount($_POST["pseudo"], $crpass)) {
+            if (!isAccount(htmlspecialchars($_POST["pseudo"]), $crpass)) {
                 echo "<span class='error'>Mot de passe ou pseudo invalide :/</span>";
             } else {
                 setcookie("pseudo", htmlspecialchars($_POST["pseudo"], time()+(60*60*24*30), '/'));
