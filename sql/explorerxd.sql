@@ -15,25 +15,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `unconfirmed`
---
-
-DROP TABLE IF EXISTS `unconfirmed`;
-CREATE TABLE IF NOT EXISTS `unconfirmed` (
-  `web_id` int(11) NOT NULL AUTO_INCREMENT,
-  `web_name` varchar(256) NOT NULL,
-  `web_ip` varchar(256) NOT NULL,
-  `web_desc` text NOT NULL,
-  `web_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `web_userID` int(11) NOT NULL,
-  PRIMARY KEY (`web_id`),
-  UNIQUE KEY `web_name` (`web_name`),
-  UNIQUE KEY `web_ip` (`web_ip`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
 -- Structure de la table `user`
 --
 
@@ -41,12 +22,10 @@ DROP TABLE IF EXISTS `user`;
 CREATE TABLE IF NOT EXISTS `user` (
   `user_id` int(11) NOT NULL AUTO_INCREMENT,
   `user_name` varchar(256) NOT NULL,
-  `user_desc` text NOT NULL,
   `user_paswd` varchar(256) NOT NULL,
   `user_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`user_id`),
-  UNIQUE KEY `user_name` (`user_name`),
-  UNIQUE KEY `user_email` (`user_email`)
+  UNIQUE KEY `user_name` (`user_name`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -62,11 +41,18 @@ CREATE TABLE IF NOT EXISTS `web` (
   `web_ip` varchar(256) NOT NULL,
   `web_desc` text NOT NULL,
   `web_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `web_userID` int(11) NOT NULL,
+  `web_username` text NOT NULL,
   PRIMARY KEY (`web_id`),
   UNIQUE KEY `web_name` (`web_name`),
   UNIQUE KEY `web_ip` (`web_ip`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `web`
+--
+
+INSERT INTO `web` (`web_id`, `web_name`, `web_ip`, `web_desc`, `web_date`, `web_username`) VALUES
+(1, 'amazon', 'amazon.fr', 'aexe', '2023-03-14 20:52:32', 'AntoineLandrieux');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
