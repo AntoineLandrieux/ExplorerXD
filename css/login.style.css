@@ -16,7 +16,7 @@ form {
    align-items: center;
 }
 
-form input {
+form * {
     height: 50px;
     width: 250px;
     margin: 10px;

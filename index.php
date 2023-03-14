@@ -10,10 +10,11 @@
     <title>ExplorerXD</title>
 </head>
 <body>
-    <div id="cookie">
-        <span>ExplorerXD utilise des cookies</span>
-        <a onclick="quitModal()" id="accept" class="btn">D'accord</a>
-    </div>
+    <?php
+    if (!isset($_COOKIE["pseudo"]) and !isset($_COOKIE["password"])) {
+        echo "<div id='cookie'><span>ExplorerXD utilise des cookies</span><a onclick='quitModal()' id='accept' class='btn'>D'accord</a></div>";
+    }
+    ?>
     <div id="load">
         <div id="loader">
             <div id="circle"></div>
@@ -43,7 +44,7 @@
     <div id="container">
         <form action="./web/result.php" method="get">
             <label for="search">ExplorerXD</label>
-            <input type="text" name="search" id="search" placeholder="Rechercher"/>
+            <input type="text" name="search" id="search" placeholder="Rechercher" required/>
         </form>
         <div id="suggestions"></div>
     </div>

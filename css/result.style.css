@@ -12,7 +12,6 @@ div.result {
     height: 50px;
     background-color: #e3ebf3;
     width: 90vw;
-    border-radius: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
     display: flex;
@@ -24,4 +23,11 @@ div.result {
 div.result a {
     color: #022;
     font-weight: bold;
+}
+
+.error {
+    background: #eb8383;
+    color: #000;
+    font-size: 50px;
+    padding: 10px;
 }
